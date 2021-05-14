@@ -1,6 +1,6 @@
 [Desktop Entry]
 Name=Mininux Replay Manager
-Exec=mininux-replay-manager
+Exec=python3 -m mininux_replay_manager
 Icon=python
 Type=Application
 Categories=Game;
