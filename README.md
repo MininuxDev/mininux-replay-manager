@@ -7,10 +7,8 @@ Just grab the AppImage/mac App with Python and the dependencies bundled from the
 
 You can also install with pip (>= python3.6 required):
 ```
-git clone https://github.com/MininuxDev/mininux-replay-manager.git
-cd mininux-replay-manager
-pip3 install --user .  # To install only for your user
-sudo pip3 install . # To install for your whole system (not recommended)
+pip3 install --user mininux-replay-manager  # install for your user
+sudo pip3 install mininux-replay-manager  # instal for your whole system (not recommended)
 ```
 You can now run `mininux-replay-manager`
 
