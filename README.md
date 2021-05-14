@@ -12,5 +12,6 @@ cd mininux-replay-manager
 pip3 install --user .  # To install only for your user
 sudo pip3 install . # To install for your whole system (not recommended)
 ```
+You can now run `mininux-replay-manager`
 
 Running the module directly from the repo seems to work, but you need to have PySide2 installed 
