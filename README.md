@@ -17,6 +17,6 @@ install mininux-replay-manager :
 pip3 install --user mininux-replay-manager  # install for your user
 sudo pip3 install mininux-replay-manager  # instal for your whole system (not recommended)
 ```
-You can now run `python3 -m mininux-replay-manager`
+You can now run `python3 -m mininux_replay_manager`
 
 Running the module directly from the repo seems to work, but you need to have PySide2 installed 
