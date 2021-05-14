@@ -87,7 +87,8 @@ class MainWindow(QMainWindow, Ui_MainWindow):
             replay_name = self.get_selected_replay_name()
             if replay_name:
                 new_name, _ = QInputDialog.getText(self, self.tr("Rename replay"), self.tr("New name :"), text=replay_name)
-                controllers.rename_replay(self.replay_data_path, replay_name, new_name)
+                if _:
+                    controllers.rename_replay(self.replay_data_path, replay_name, new_name)
             else:
                 self.warn_no_replay_selected()
 
