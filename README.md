@@ -3,9 +3,11 @@
 Simple replay manager for the game Project+, compatible with Linux and macOS
 
 ## Installation
-Just grab the AppImage/mac App with Python and the dependencies bundled from the [releases](https://github.com/MininuxDev/mininux-replay-manager/releases/)
+### direct binary download
+Just grab the Linux binary/Mac App (the the dependencies are bundled inside) from the [releases](https://github.com/MininuxDev/mininux-replay-manager/releases/)
 
-On linux, you can also install with pip (>= python3.6 and qt5 required):
+### Install package
+On linux (it may work on mac but i couldn't test it), you can also install with pip (>= python3.6 and qt5 required):
 
 install qt5 :
 ```
@@ -18,5 +20,3 @@ pip3 install --user mininux-replay-manager  # install for your user
 sudo pip3 install mininux-replay-manager  # instal for your whole system (not recommended)
 ```
 You can now run `python3 -m mininux_replay_manager`
-
-Running the module directly from the repo seems to work, but you need to have PySide2 installed 
