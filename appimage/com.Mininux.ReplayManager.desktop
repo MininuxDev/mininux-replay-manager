@@ -3,4 +3,4 @@ Name=Mininux Replay Manager
 Exec=mininux-replay-manager
 Icon=python
 Type=Application
-Categories=Utility;
+Categories=Game;
