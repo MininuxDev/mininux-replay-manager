@@ -228,7 +228,7 @@ const QString MainWindow::getUserFolderPath() {
 
 const QString MainWindow::getUserDataPath() {
     if (!getUserFolderPath().isEmpty()) {
-        #if defined(Q_OS_MAC_OS)
+        #if defined(Q_OS_MACOS)
             return QDir::cleanPath(getUserFolderPath() + "/Contents/Resources/User/Wii/title/00010000/52534245/data/");
         #else
             return QDir::cleanPath(getUserFolderPath() + "/Wii/title/00010000/52534245/data/");
