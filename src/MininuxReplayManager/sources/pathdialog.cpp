@@ -9,7 +9,7 @@ PathDialog::PathDialog(MainWindow *parent): QDialog(parent),
     ui->setupUi(this);
 
     #ifdef Q_OS_MACOS
-        ui->userFolder_Label->setText(tr("Dolphin.app"))
+        ui->userFolder_Label->setText(tr("Dolphin.app"));
     #endif
     // use settings value, otherwise use default value
 
@@ -29,7 +29,7 @@ PathDialog::PathDialog(MainWindow *parent): QDialog(parent),
         #if defined(Q_OS_MACOS)
             QDir defaultUserFolderDir = QDir("Dolphin.app");
             defaultUserFolderDir.makeAbsolute();
-            ui->userFolder_Line->setText(defaultUserFolderDir.path()));
+            ui->userFolder_Line->setText(defaultUserFolderDir.path());
         #elif defined(Q_OS_LINUX)
             ui->userFolder_Line->setText(QDir::home().path() + "/.local/share/FasterPPlus/");
         #else
@@ -51,7 +51,7 @@ std::tuple<QString, QString> PathDialog::getPaths()
 void PathDialog::setUserFolderPath()
 {
     #if defined(Q_OS_MACOS) // On mac, we have to use getOpenFileName coz macos considers .app folders as files...
-        QString path = QFileDialog::getOpenFileName(this, tr("Select Dolphin App"), ui->userFolder_Line->text();
+        QString path = QFileDialog::getOpenFileName(this, tr("Select Dolphin App"), ui->userFolder_Line->text());
     #else
          QString path = QFileDialog::getExistingDirectory(this, tr("Select Dolphin Folder"), ui->userFolder_Line->text());
     #endif
