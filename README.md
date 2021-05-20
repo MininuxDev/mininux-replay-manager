@@ -23,6 +23,6 @@ Generate makefile :
 ```
 mkdir -p build
 cd build
-qmake ../MininuxReplayManager.pro
+qmake CONFIG+=release ../MininuxReplayManager.pro
 make
 ```
