@@ -42,6 +42,8 @@ linux-g++ {
 
 !isEmpty(target.path): INSTALLS += target
 
+ICON = src/MininuxReplayManager/resources/icon.icns
+
 DISTFILES += \
     build_appimage.sh \
     misc/mininux-replay-manager.desktop
