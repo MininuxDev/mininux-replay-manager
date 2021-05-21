@@ -17,9 +17,9 @@ PathDialog::PathDialog(MainWindow *parent): QDialog(parent),
         ui->dolphinFolder_Line->setText(parent->getDolphinFolderPath());
     } else {
         setDolphinFolderLineItalic(true);
-        QDir defaultDolphinFolderDir = QDir(".");
-        defaultDolphinFolderDir.makeAbsolute();
-        ui->dolphinFolder_Line->setText(defaultDolphinFolderDir.path());
+        //QDir defaultDolphinFolderDir = QDir(".");
+        //defaultDolphinFolderDir.makeAbsolute();
+        ui->dolphinFolder_Line->setText(QDir(".").path());
     }
 
     if (parent->isUserDataPathValid()!=MainWindow::PathNotSet) {
@@ -27,9 +27,9 @@ PathDialog::PathDialog(MainWindow *parent): QDialog(parent),
     } else {
         setUserFolderLineItalic(true);
         #if defined(Q_OS_MACOS)
-            QDir defaultUserFolderDir = QDir("Dolphin.app");
-            defaultUserFolderDir.makeAbsolute();
-            ui->userFolder_Line->setText(defaultUserFolderDir.path());
+            //QDir defaultUserFolderDir = QDir("./Dolphin.app");
+            //defaultUserFolderDir.makeAbsolute();
+            ui->userFolder_Line->setText(QDir("./Dolphin.app").path());
         #elif defined(Q_OS_LINUX)
             ui->userFolder_Line->setText(QDir::home().path() + "/.local/share/FasterPPlus/");
         #else

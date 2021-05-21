@@ -218,7 +218,7 @@ const QString MainWindow::getDolphinFolderPath() {
 
 const QString MainWindow::getReplayDataPath() {
     if (!getDolphinFolderPath().isEmpty()) {
-        return QDir::cleanPath(m_settings->value("paths/dolphin_folder").toString() + "/ReplayData");
+        return m_settings->value("paths/dolphin_folder").toString() + "/ReplayData";
     } else return "";
 }
 
@@ -229,9 +229,9 @@ const QString MainWindow::getUserFolderPath() {
 const QString MainWindow::getUserDataPath() {
     if (!getUserFolderPath().isEmpty()) {
         #if defined(Q_OS_MACOS)
-            return QDir::cleanPath(getUserFolderPath() + "/Contents/Resources/User/Wii/title/00010000/52534245/data/");
+            return getUserFolderPath() + "/Contents/Resources/User/Wii/title/00010000/52534245/data/");
         #else
-            return QDir::cleanPath(getUserFolderPath() + "/Wii/title/00010000/52534245/data/");
+            return getUserFolderPath() + "/Wii/title/00010000/52534245/data/";
         #endif
     } else return "";
 }
