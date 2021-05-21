@@ -9,7 +9,7 @@ int main(int argc, char *argv[])
     //Set working directory because apple...
     QDir bin(QCoreApplication::applicationDirPath());
 
-    #if defined(Q_WS_MAC)
+    #if defined(Q_OS_MACOS)
         bin.cdUp(); bin.cdUp(); bin.cdUp();
     #endif
 
