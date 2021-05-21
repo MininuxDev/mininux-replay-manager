@@ -12,6 +12,7 @@ MainWindow::MainWindow(QWidget *parent): QMainWindow(parent),
     m_replayDataModel(new QFileSystemModel(this)),
     m_userDataModel(new QFileSystemModel(this))
 {
+    qInfo() << "Current directory: " << QDir(".").absolutePath();
     qInfo() << "Using Qsettings file:" << m_settings->fileName();
     qInfo() << "Paths:";
     qInfo() << "   ReplayData path: " << getReplayDataPath();
